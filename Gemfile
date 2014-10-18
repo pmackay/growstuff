@@ -118,6 +118,10 @@ gem 'omniauth-flickr', '>= 0.0.15'
 
 gem 'rake', '>= 10.0.0'
 
+# API support
+gem 'oj'
+gem 'rabl'
+
 group :development, :test do
   gem 'haml-rails'                   # HTML templating language
   gem 'rspec-rails', '~> 2.12.1'     # unit testing framework
