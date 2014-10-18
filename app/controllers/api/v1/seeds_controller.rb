@@ -10,4 +10,9 @@ class Api::V1::SeedsController < ApplicationController
     end
   end
 
+  # GET api/v1/seeds/1
+  def show
+    @seed = Seed.find(params[:id])
+  end
+
 end

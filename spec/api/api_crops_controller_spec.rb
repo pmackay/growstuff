@@ -4,9 +4,8 @@ describe Api::V1::CropsController do
 
   describe "GET crops index" do
     it 'fetches the crops index' do
-      get :index, :format => "json"
+      get '/api/v1/crops'
       response.should be_success
-      # response.should render_template("crops/index")
       response.content_type.should eq("application/json")
     end
   end

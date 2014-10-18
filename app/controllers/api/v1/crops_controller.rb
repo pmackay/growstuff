@@ -12,4 +12,9 @@ class Api::V1::CropsController < ApplicationController
     end
   end
 
+  # GET /crops/1
+  def show
+    @crop = Crop.includes(:scientific_names, {:plantings => :photos}).find(params[:id])
+    # @posts = @crop.posts.paginate(:page => params[:page])
+  end
 end
